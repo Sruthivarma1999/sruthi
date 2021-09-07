@@ -1,1 +1,97 @@
 # python
+#Assignment 1 ( 5 programs )
+1 //print “Welcome to the programming world” including the double quotation
+input: print (‘ “Welcome to the programming world” ‘ )
+Output: “Welcome to the programming world”
+
+2 // C program to find data type
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	char value[MAX_INPUT] = "";
+	double temp;
+	int n;
+	char str[MAX_INPUT] = "";
+	double val = 1e-12;
+            fgets(value, 100, stdin); 
+	if (sscanf(value, "%lf", &temp) == 1)
+	{
+		n = (int)temp; // typecast to int.
+		if (fabs(temp - n) / temp > val)
+			printf("The input is a floating point\n");		
+		else
+			printf("The input is an integer\n");		
+	}
+ 
+	else if (sscanf(value, "%s", str) == 1)	
+		printf("The input is a string\n");
+	
+	else 
+		printf("input not recognized\n");	
+}
+
+3// convert the data from one form to another form.
+Converting Numbers to String
+            s = "GFG"
+            n = 50
+            print("String: " + s + "\nNumber: " + str(n))
+ 
+Converting String to Number
+          s = '50'
+          n = int(s)
+          print(n)
+          print(type(n))
+          f = float(s)
+          print(f)
+          print(type(f))
+
+Floating Point to Integer
+           f = 10.0
+           n = int(f)
+           print(n)
+           print(type(n))
+
+Integer to Floating Point
+          n = 10
+          f = float(n)
+          print(f)
+          print(type(f))
+          
+4// find the roots of a quadratic equation. 
+import math 
+ def findRoots(a, b, c):  
+ dis_form = b * b - 4 * a * c  
+ sqrt_val = math.sqrt(abs(dis_form))  
+  if dis_form > 0:  
+        print(" real and different roots ")  
+        print((-b + sqrt_val) / (2 * a))  
+        print((-b - sqrt_val) / (2 * a))  
+  elif dis_form == 0:  
+        print(" real and same roots")  
+        print(-b / (2 * a))  
+   else:  
+        print("Complex Roots")  
+        print(- b / (2 * a), " + i", sqrt_val)  
+        print(- b / (2 * a), " - i", sqrt_val)  
+a = int(input('Enter a:'))  
+b = int(input('Enter b:'))  
+c = int(input('Enter c:'))  
+if a == 0:  
+    print("Input correct quadratic equation")  
+else:  
+    findRoots(a, b, c) 
+    
+5// program that utilises all the arithmetic operations.
+num1 = input('Enter first number: ')  
+num2 = input('Enter second number: ')  
+sum = float(num1) + float(num2)  
+min = float(num1) - float(num2)  
+mul = float(num1) * float(num2)  
+div = float(num1) / float(num2)  
+print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))  
+print('The subtraction of {0} and {1} is {2}'.format(num1, num2, min))  
+print('The multiplication of {0} and {1} is {2}'.format(num1, num2, mul))  
+print('The division of {0} and {1} is {2}'.format(num1, num2, div))  
+
